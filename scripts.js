@@ -11,7 +11,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         message: message
     };
 
-    emailjs.send('service_0l2kf56', 'template_zbs6j5p', templateParams)
+    emailjs.send('Gmail', 'template_zbs6j5p', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             alert('Thank you for your message!');
