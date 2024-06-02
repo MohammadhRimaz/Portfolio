@@ -8,25 +8,31 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.profile {
+.header-left {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.profile img {
+.header-left img {
     border-radius: 50%;
     width: 100px;
     height: 100px;
     margin-right: 1rem;
 }
 
-.profile h1 {
-    margin: 0;
+.header-left h1 {
+    margin: 50;
+    font-size: 3rem;
+}
+
+.header-right {
+    display: flex;
 }
 
 nav ul {
@@ -66,11 +72,29 @@ section {
     border-radius: 5px;
 }
 
-.project {
-    background-color: #f4f4f4;
-    margin: 1rem 0;
+.project-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-tile {
+    flex: 1 1 calc(50% - 1rem);
+    text-decoration: none;
+    color: white;
     padding: 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1 );
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-tile h3 {
+    margin-top: 0;
 }
 
 footer {
@@ -80,10 +104,20 @@ footer {
     padding: 1rem 0;
 }
 
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
 .social-media a {
     color: white;
     margin: 0 1rem;
     text-decoration: none;
+}
+
+.social-media a:hover {
+    transform: scale(1.1);
 }
 
 form {
