@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,6 +12,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
+    position: relative;
 }
 
 .header-left {
@@ -37,23 +39,84 @@ header {
 
 nav ul {
     list-style: none;
+    display: flex;
+    margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1rem;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.background-animation {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    background: #111;
+}
+
+.shape {
+    position: absolute;
+    border: 1px solid #fff;
+    opacity: 0.5;
+    animation: moveShapes linear infinite;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #fff;
+    line-height: 0; 
+    border-top: none;
+}
+
+.rectangle {
+    width: 20px;
+    height: 10px;
+}
+
+@keyframes moveShapes{
+    from {
+        transform: translateX(-110vw); /* Change the starting point for smoother animation */
+    }
+    to {
+        transform: translateX(110vw); /* Change the ending point for smoother animation */
+    }
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 section {
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8 );
+    border-radius: 10px;
+    margin-bottom: 2rem;
 }
 
 #about {
@@ -114,6 +177,7 @@ footer {
     color: white;
     margin: 0 1rem;
     text-decoration: none;
+    transition: transform 0.3s;
 }
 
 .social-media a:hover {

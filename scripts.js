@@ -20,3 +20,21 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             alert('Oops! Something went wrong.');
         });
 });
+
+// Call the function to create shapes with reduced animation speed
+createShapes();
+
+function createShapes() {
+    const backgroundAnimation = document.getElementById('background-animation');
+    const shapes = ['circle', 'triangle', 'rectangle'];
+
+    for (let i = 0; i < 100; i++) {
+        const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
+        const shape = document.createElement('div');
+        shape.classList.add('shape', shapeType);
+        shape.style.top = `${Math.random() * 100}vh`;
+        shape.style.left = `${Math.random() * 100}vw`;
+        shape.style.animationDuration = `${20 + Math.random() * 20}s`; // Adjust animation speed
+        backgroundAnimation.appendChild(shape);
+    }
+}
