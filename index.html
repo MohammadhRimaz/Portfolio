@@ -20,12 +20,8 @@
     </script>
   </head>
   <body>
-    <header>
-      <div class="header-left">
-        <img src="profile.jpg" alt="Profile Picture" />
-        <h1>Mohammadh Rimaz</h1>
-      </div>
-      <nav class="header-right">
+    <header id="about">
+      <nav class="header-nav">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -33,6 +29,18 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="header-content">
+        <div class="header-left">
+          <h1>Hello! I am Mohammadh Rimaz</h1>
+          <p>
+            Hi, I'm a software engineer with 1 year of experience in Java. I
+            love creating efficient and scalable software solutions.
+          </p>
+        </div>
+        <div class="header-extra-border">
+          <img src="Profile.jpg" alt="Profile Image" />
+        </div>
+      </div>
     </header>
 
     <div class="background-animation" id="background-animation">
@@ -40,22 +48,14 @@
     </div>
 
     <main>
-      <section id="about">
-        <h1>About Me</h1>
-        <p>
-          Hi, I'm a software engineer with 1 year of experience in Java. I love
-          creating efficient and scalable software solutions.
-        </p>
-      </section>
-
       <section id="skills">
         <h2>Skills</h2>
         <ul>
-          <li>Java</li>
-          <li>Spring Framework</li>
-          <li>HTML/CSS</li>
-          <li>JavaScript</li>
-          <li>SQL</li>
+          <li><img src="java.png" alt="Java" />Java</li>
+          <li><img src="css.png" alt="CSS" />CSS</li>
+          <li><img src="html.png" alt="HTML" />HTML</li>
+          <li><img src="javascript.png" alt="JavaScript" />JavaScript</li>
+          <li><img src="sql.png" alt="SQL" />SQL</li>
         </ul>
       </section>
 
@@ -67,7 +67,11 @@
             target="_blank"
             class="project-tile"
             style="
-              background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+              background: linear-gradient(
+                to bottom right,
+                #ff9a9e 0%,
+                #fad0c4 100%
+              );
             "
           >
             <h3>Project One</h3>
@@ -81,10 +85,50 @@
             target="_blank"
             class="project-tile"
             style="
-              background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+              background: linear-gradient(
+                to bottom right,
+                #a18cd1 0%,
+                #fbc2eb 100%
+              );
             "
           >
             <h3>Project two</h3>
+            <p>
+              A brief description of the project, technologies used, and your
+              role.
+            </p>
+          </a>
+          <a
+            href="https://linktoyourproject1.com"
+            target="_blank"
+            class="project-tile"
+            style="
+              background: linear-gradient(
+                to bottom right,
+                #0e7e40 0%,
+                #eeebbe 100%
+              );
+            "
+          >
+            <h3>Project three</h3>
+            <p>
+              A brief description of the project, technologies used, and your
+              role.
+            </p>
+          </a>
+          <a
+            href="https://linktoyourproject1.com"
+            target="_blank"
+            class="project-tile"
+            style="
+              background: linear-gradient(
+                to bottom right,
+                #36d1dc 0%,
+                #2575fc 100%
+              );
+            "
+          >
+            <h3>Project four</h3>
             <p>
               A brief description of the project, technologies used, and your
               role.
