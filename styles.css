@@ -20,6 +20,7 @@ header {
     position: relative;
     text-align: center;
     z-index: 2;
+    padding: 1rem; /*edit*/
 }
 
 .header-nav {
@@ -56,7 +57,7 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 80%;
 }
@@ -82,6 +83,7 @@ header {
     position: relative;
     z-index: 1; /* Ensure the border appears behind the image */
     margin-top: 5px; /* Adjust this value as needed to position the border */
+    padding: auto; /*edit*/
 }
 
 .header-extra-border img {
@@ -89,6 +91,7 @@ header {
     position: relative;
     z-index: 2; /* Ensure the image appears above the border */
     margin-top: -25px; /* Adjust this value to position the image */
+    padding: auto; /*edit*/
 }
 
 .background-animation {
